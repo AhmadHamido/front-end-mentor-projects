@@ -1,0 +1,441 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  display: grid;
+  grid-template: repeat(3, auto) / auto repeat(2, 1fr) auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ================
+Typography
+=============== */
+
+h1,
+h2,
+h3,
+p {
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  color: hsl(210, 10%, 33%);
+}
+
+h1 {
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.6875rem;
+  margin-bottom: 0.67em;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: hsl(201, 11%, 66%);
+}
+
+.header-logo {
+  margin-top: 5em;
+}
+
+.header-paragraph {
+  margin-bottom: 2.25em;
+}
+
+.section-one-image,
+.section-one-content {
+  margin-bottom: 3em;
+}
+
+.section-three-image {
+  margin: 0 auto;
+}
+
+.section-three-content-title {
+  margin-bottom: 1em;
+}
+
+.section-three-paragraph,
+.section-four-image {
+  margin-bottom: 5em;
+}
+
+.header-logo,
+.section-three-image,
+.section-three-content-paragraph,
+.section-four-image:last-child {
+  margin-bottom: 2em;
+}
+
+.footer-logo {
+  margin-top: 2.5em;
+  max-width: 60px;
+}
+
+.footer-logo,
+.section-five-paragraph {
+  margin-bottom: 1.5em;
+}
+
+/* buttons and links */
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+}
+
+.footer-link a {
+  color: #707070;
+}
+
+.footer-link {
+  margin-bottom: 1em;
+}
+
+.btn,
+.footer-link {
+  opacity: 100%;
+}
+
+.btn {
+  border-radius: 2em;
+  padding: 0.75em 0.5em;
+  margin: 0.75em 0;
+  box-shadow: 0 5px 5%;
+  font-weight: 600;
+}
+
+.btn-ios {
+  background: hsl(171, 66%, 44%);
+}
+
+.btn-mac {
+  background: hsl(233, 100%, 69%);
+}
+
+.btn-ios:hover,
+.btn-mac:hover,
+.btn-ios:active,
+.btn-mac:active {
+  opacity: 85%;
+}
+
+.footer-link a:hover,
+.footer-link a:active {
+  color: hsl(171, 66%, 44%);
+}
+
+/* .social-media-link:nth-of-type(2) {
+  filter: invert(59%) sepia(68%) saturate(463%) hue-rotate(122deg)
+    brightness(91%) contrast(86%);
+} */
+
+.social-media-link:hover,
+.social-media-link:active {
+  filter: invert(59%) sepia(68%) saturate(463%) hue-rotate(122deg)
+    brightness(91%) contrast(86%);
+}
+/* ================
+Layout
+=============== */
+
+header {
+  background-image: url(images/bg-header-mobile.png);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+footer {
+  background: hsl(195, 14%, 95%);
+}
+
+.container {
+  width: 90%;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.container-header {
+  margin-bottom: 10em;
+}
+
+.main-content,
+.section-2 {
+  margin-bottom: 6em;
+}
+
+.section-one-intro,
+.section-two-intro {
+  margin-bottom: 4em;
+}
+
+/* grid layout */
+
+.container,
+.main-content,
+.section-three-content,
+.social-media-icons {
+  display: grid;
+}
+
+header,
+main,
+footer,
+h1,
+.btn,
+.header-logo,
+.header-paragraph,
+.section-one-intro,
+.section-one-image,
+.section-one-content,
+.section-2,
+.section-two-intro,
+.section-two-image,
+.section-three-main,
+.section-three-content,
+.section-five-title,
+.section-five-paragraph {
+  grid-column: 1 / -1;
+}
+
+.container-header {
+  grid-template: 1fr repeat(3, auto) / repeat(2, 1fr);
+}
+
+.section-1 {
+  grid-template: repeat(5, auto) / repeat(2, 1fr);
+}
+
+.section-3 {
+  grid-template: repeat(4, auto) / repeat(2, 1fr);
+}
+
+.section-5 {
+  grid-template: repeat(4, auto) / repeat(2, 1fr);
+}
+
+.container-footer {
+  grid-template-rows: repeat(7, auto);
+}
+
+.header-logo,
+.section-one-intro,
+.section-two-intro,
+.section-two-image,
+.section-3,
+.section-three-main,
+.section-four-image,
+.section-5,
+.footer-logo,
+.social-media-icons {
+  justify-self: center;
+}
+
+.section-5 .btn-mac {
+  grid-row: 4;
+}
+
+.social-media-icons {
+  grid-template-rows: auto;
+}
+
+.social-media-link {
+  grid-row: 1;
+  margin: 1em 1.25em 2em;
+}
+
+/* ================
+Media Query
+=============== */
+
+@media (min-width: 600px) {
+  body {
+    font-size: 1.125rem;
+  }
+
+  header {
+    background-image: url(images/bg-header-desktop.png);
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .section-one-content-title,
+  .section-one-content-paragraph {
+    text-align: left;
+  }
+
+  .section-one-content-title {
+    font-size: 1.5rem;
+  }
+
+  .section-one-content-paragraph {
+    font-size: 0.95rem;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  .container-header,
+  .section-one-intro,
+  .section-two-intro,
+  .section-three-main,
+  .section-5 {
+    max-width: 650px;
+  }
+
+  .container-footer,
+  .section-3,
+  .section-4 {
+    max-width: 1100px;
+  }
+
+  .section-1 {
+    grid-template: auto repeat(3, 140px) auto / repeat(2, 1fr);
+    grid-column-gap: 100px;
+  }
+
+  .section-one-image {
+    grid-column: 1;
+    grid-row: 2 / -1;
+    object-position: -25px;
+  }
+
+  .section-one-content {
+    grid-column: 2;
+    max-width: 350px;
+    margin-bottom: 0;
+    align-self: center;
+  }
+
+  .section-one-1 {
+    grid-row: 2;
+  }
+
+  .section-one-2 {
+    grid-row: 3;
+  }
+
+  .section-one-3 {
+    grid-row: 4;
+  }
+
+  .section-3 {
+    grid-template: repeat(2, auto) / repeat(3, auto);
+    grid-gap: 20px;
+  }
+
+  .section-three-content {
+    grid-row: 2;
+  }
+
+  .section-three-1 {
+    grid-column: 1;
+  }
+
+  .section-three-2 {
+    grid-column: 2;
+  }
+
+  .section-three-3 {
+    grid-column: 3;
+  }
+
+  .section-4 {
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 95px;
+    justify-self: center;
+  }
+
+  .container-footer {
+    grid-template: repeat(2, 50%) / repeat(5, auto);
+    padding: 2em 0;
+  }
+
+  .footer-logo {
+    grid-row: 1;
+  }
+
+  /* buttons and links */
+
+  .btn-ios {
+    grid-column: 1;
+    justify-self: end;
+  }
+
+  .btn-mac {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .section-5 .btn-mac {
+    grid-row: 3;
+  }
+
+  .btn {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    font-size: 1rem;
+  }
+
+  .contact-us,
+  .press-kit {
+    grid-row: 2;
+  }
+
+  .contact-us {
+    grid-column: 2;
+  }
+
+  .press-kit {
+    grid-column: 3;
+  }
+
+  .install-guide {
+    grid-column: 4;
+  }
+
+  .footer-logo,
+  .footer-link {
+    justify-self: start;
+  }
+
+  .footer-logo,
+  .footer-link {
+    margin: 0;
+  }
+
+  .footer-logo,
+  .social-media-icons {
+    grid-row: 1 / -1;
+  }
+
+  .social-media-icons {
+    grid-column: 5;
+    align-self: center;
+    justify-self: end;
+  }
+}
