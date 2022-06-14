@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  /* font-size: 0.9375rem; */
+  color: #494848;
+  line-height: 1.6;
+}
+
+/* ==============
+Typography
+============= */
+
+.title-main,
+.title-text {
+  font-size: 1.5rem;
+}
+
+.title-text {
+  font-weight: 200;
+}
+
+.title-paragraph {
+  font-size: 0.9rem;
+  margin-top: 1em;
+  max-width: 32ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box-title {
+  font-size: 1.2em;
+}
+
+.box-paragraph {
+  font-size: 0.82rem;
+  margin-top: 0.25em;
+}
+
+.box-image {
+  width: 50px;
+  height: 50px;
+  justify-self: end;
+  align-self: end;
+  object-fit: cover;
+}
+
+.title-paragraph,
+.box-paragraph {
+  opacity: 0.4;
+}
+
+/* ===============
+Layout
+============== */
+
+.container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin: 4em auto;
+}
+
+.sub-container {
+  margin: 0 auto 2em auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.box {
+  background: hsl(0, 0%, 98%);
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+  box-shadow: 0px 5px 10px 2px #c2c2c2;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: repeat(2, auto) 90px;
+}
+
+.box-1 {
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.box-2 {
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.box-3 {
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.box-4 {
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+/* ===============
+Media Query
+============== */
+
+@media (min-width: 42rem) {
+  body {
+    font-size: 0.9375rem;
+  }
+
+  .title-paragraph {
+    max-width: 55ch;
+  }
+
+  .sub-container {
+    max-width: 1000px;
+    display: grid;
+    grid-template: repeat(12, 30px) / repeat(3, 1fr);
+    grid-column-gap: 20px;
+  }
+
+  .box {
+    grid-template-rows: 30px 50px 90px;
+  }
+
+  .box-1 {
+    grid-column: 1;
+    grid-row: 5 / span 8;
+  }
+
+  .box-2 {
+    grid-column: 2;
+    grid-row: span 8;
+  }
+
+  .box-3 {
+    grid-column: 2;
+    grid-row: 9 / span 8;
+  }
+
+  .box-4 {
+    grid-column: 3;
+    grid-row: 5 / span 8;
+  }
+
+  .box-image {
+    width: 60px;
+    height: 60px;
+  }
+}
