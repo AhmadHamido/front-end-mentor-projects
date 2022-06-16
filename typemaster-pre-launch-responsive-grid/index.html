@@ -36,37 +36,49 @@
             <p class="intro-release-date">RELEASE ON 5/27</p>
           </div>
 
-          <img
-            src="images/mobile/image-keyboard.jpg"
-            alt="image of a black and grey keyboard with a red button escape"
-            srcset="
-              images/mobile/image-keyboard.jpg  1x,
-              images/tablet/image-keyboard.jpg  2x,
-              images/desktop/image-keyboard.jpg 3x
-            "
-            sizes="(min-width: 600px) 2x, (min-width: 820px) 3x"
-          />
+          <picture>
+            <source
+              media="(min-width: 600px)"
+              srcset="images/tablet/image-keyboard.jpg"
+            />
+            <source
+              media="(min-width: 811px)"
+              srcset="images/desktop/image-keyboard.jpg"
+            />
+            <img
+              src="images/mobile/image-keyboard.jpg"
+              alt="image of a black and grey keyboard with a red button escape"
+            />
+          </picture>
+          <picture>
+            <source
+              media="(min-width: 600px)"
+              srcset="images/tablet/image-phone-and-keyboard.jpg"
+            />
+            <source
+              media="(min-width: 811px)"
+              srcset="images/desktop/image-phone-and-keyboard.jpg"
+            />
+            <img
+              src="images/mobile/image-phone-and-keyboard.jpg"
+              alt="an image with a keyboard and a phone next to each other"
+            />
+          </picture>
 
-          <img
-            src="images/mobile/image-phone-and-keyboard.jpg"
-            alt="an image with a keyboard and a phone next to each other"
-            srcset="
-              images/mobile/image-phone-and-keyboard.jpg  1x,
-              images/tablet/image-phone-and-keyboard.jpg  2x,
-              images/desktop/image-phone-and-keyboard.jpg 3x
-            "
-            sizes="(min-width: 600px) 2x, (min-width: 820px) 3x"
-          />
-          <img
-            src="images/mobile/image-glass-and-keyboard.jpg"
-            alt="image of a glass of water and a keyboard"
-            srcset="
-              images/mobile/image-glass-and-keyboard.jpg  1x,
-              images/tablet/image-glass-and-keyboard.jpg  2x,
-              images/desktop/image-glass-and-keyboard.jpg 3x
-            "
-            sizes="(min-width: 600px) 2x, (min-width: 820px) 3x"
-          />
+          <picture>
+            <source
+              media="(min-width: 600px)"
+              srcset="images/tablet/image-glass-and-keyboard.jpg"
+            />
+            <source
+              media="(min-width: 811px)"
+              srcset="images/desktop/image-glass-and-keyboard.jpg"
+            />
+            <img
+              src="images/mobile/image-glass-and-keyboard.jpg"
+              alt="image of a glass of water and a keyboard"
+            />
+          </picture>
 
           <div class="sub-intro">
             <h2 class="secondary-title">MECHANICAL WIRELESS KEYBOARD</h2>
@@ -140,7 +152,10 @@
 
     <footer>
       <div class="container container-footer">
-        <p class="footer-copyright">Typemaster 2021 | All Rights Reserved</p>
+        <p class="footer-copyright">
+          Typemaster 2021 |
+          <span class="rights-received">All Rights Reserved</span>
+        </p>
       </div>
     </footer>
   </body>

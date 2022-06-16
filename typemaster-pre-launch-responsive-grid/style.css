@@ -6,10 +6,97 @@
 
 body {
   font-family: "Barlow", sans-serif;
+  color: #162542;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ===============
+Typography
+============== */
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: #7b8bad;
+}
+
+.rights-received {
+  opacity: 70%;
 }
 
 .content-feature-image {
   background-color: #f16718;
   padding: 1em;
   border-radius: 10px;
+}
+
+/* buttons and links */
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.header-btn {
+  background: #f16718;
+  color: #fff;
+}
+
+.section-btn {
+  background: #e8eff2;
+  color: #162542;
+}
+
+.header-btn:hover,
+.header-btn:active {
+  background: #ff9b62;
+}
+
+.section-btn:hover,
+.section-btn:active {
+  background: #162542;
+  color: #fff;
+}
+
+/* ===============
+Layout
+============== */
+
+/* ===============
+Media Query
+============== */
+
+@media (min-width: 600px) {
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1.625rem;
+  }
+}
+
+@media (min-width: 811px) {
 }
