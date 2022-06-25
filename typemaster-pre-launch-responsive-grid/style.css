@@ -18,11 +18,11 @@ Typography
 ============== */
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 3.25rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.875rem;
 }
 
 h3 {
@@ -31,16 +31,23 @@ h3 {
 
 p {
   color: #7b8bad;
+  line-height: 1.5;
 }
 
 .rights-received {
   opacity: 70%;
 }
+/*  images  */
+.section-image-1,
+.section-image-2,
+.section-image-3,
+.content-feature-image {
+  border-radius: 10px;
+}
 
 .content-feature-image {
   background-color: #f16718;
   padding: 1em;
-  border-radius: 10px;
 }
 
 /* buttons and links */
@@ -56,29 +63,142 @@ a {
 }
 
 .header-btn {
-  background: #f16718;
-  color: #fff;
-}
-
-.section-btn {
   background: #e8eff2;
   color: #162542;
 }
 
+.section-btn {
+  background: #f16718;
+  color: #fff;
+}
+
 .header-btn:hover,
 .header-btn:active {
-  background: #ff9b62;
+  background: #162542;
+  color: #fff;
 }
 
 .section-btn:hover,
 .section-btn:active {
-  background: #162542;
-  color: #fff;
+  background: #ff9b62;
 }
 
 /* ===============
 Layout
 ============== */
+
+.container {
+  width: 90%;
+  max-width: 327px;
+  margin: 0 auto;
+}
+
+.sub-intro,
+.section-2,
+footer {
+  text-align: center;
+}
+
+/* grid layout */
+
+body,
+.container,
+.section-1,
+.intro {
+  display: grid;
+}
+
+body {
+  grid-template: repeat(4, auto) / repeat(4, auto);
+  grid-gap: 20px;
+}
+
+.container-header {
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+.container-main {
+  grid-template-rows: repeat(2, auto);
+  grid-row-gap: 50px;
+}
+
+.section-1 {
+  grid-template: repeat(4, auto) / 37% 63%;
+  grid-row-gap: 20px;
+}
+
+.intro {
+  grid-template: repeat(3, auto) / repeat(2, auto);
+  grid-row-gap: 20px;
+}
+
+header,
+main,
+footer,
+h1,
+.sub-intro,
+.intro-paragraph,
+.footer-copyright {
+  grid-column: 1 / -1;
+}
+
+header {
+  grid-row: 1;
+}
+
+main {
+  grid-row: 2 / 4;
+}
+
+footer {
+  justify-self: center;
+}
+
+footer,
+.sub-intro {
+  grid-row: 4;
+}
+
+.header-btn,
+.intro-release-date {
+  justify-self: end;
+}
+
+.intro-paragraph,
+.picture-keyboard {
+  grid-row: 2;
+}
+
+.picture-phone-keyboard,
+.picture-glass-keyboard,
+.section-btn,
+.intro-release-date {
+  grid-row: 3;
+}
+
+.picture-phone-keyboard {
+  grid-column: 1;
+}
+
+.intro-release-date,
+.picture-glass-keyboard {
+  grid-column: 2;
+}
+
+.picture-keyboard {
+  grid-column: 1 / -1;
+}
+
+.intro-release-date,
+.section-btn {
+  align-self: center;
+}
+
+.section-btn {
+  justify-self: start;
+}
 
 /* ===============
 Media Query
