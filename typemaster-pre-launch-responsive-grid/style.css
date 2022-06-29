@@ -65,6 +65,11 @@ h3 {
   padding: 1em;
 }
 
+.content-feature-1 .content-feature-image,
+.content-feature-3 .content-feature-image {
+  padding: 1.25em;
+}
+
 .section-image-2 {
   filter: invert(20%) sepia(81%) saturate(2558%) hue-rotate(355deg)
     brightness(80%) contrast(90%);
@@ -211,6 +216,122 @@ Media Query
 
 @media (min-width: 600px) {
   h2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  h3,
+  .section-2,
+  .sub-intro {
+    text-align: left;
+  }
+
+  .content-feature-1,
+  .content-feature-3 {
+    margin-right: 3em;
+  }
+
+  .content-feature-2,
+  .content-feature-4 {
+    margin-left: 2em;
+  }
+
+  /* grid layout */
+
+  .container-header {
+    grid-template-columns: 73px repeat(2, 344.5px) 73px;
+  }
+
+  .section-1 {
+    grid-template:
+      400px auto auto / 73px repeat(auto-fill, minmax(150px, 1fr))
+      73px;
+  }
+
+  .sub-intro,
+  .content-feature {
+    display: grid;
+  }
+
+  .sub-intro {
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 50px;
+  }
+
+  .section-2 {
+    grid-template: repeat(2, auto) / 73px repeat(2, 330px) 73px;
+  }
+
+  .content-feature {
+    grid-template-rows: 90px 70px auto;
+  }
+
+  .header-btn {
+    grid-column: 4 / 3;
+  }
+
+  .intro {
+    grid-column: 2 / span 2;
+    align-self: center;
+    margin-right: 5em;
+  }
+
+  .picture-keyboard {
+    grid-row: 1;
+    grid-column: 4 / -1;
+  }
+
+  .double-picture {
+    grid-row: 2;
+    grid-column-gap: 30px;
+  }
+
+  .double-picture,
+  .sub-intro {
+    grid-column: 2 / -2;
+  }
+
+  .section-image-2 {
+    max-height: 324px;
+    max-width: 214px;
+    object-fit: cover;
+  }
+
+  .section-image-3 {
+    max-width: 445px;
+  }
+
+  .secondary-paragraph {
+    grid-column: 2;
+    align-self: center;
+  }
+
+  .secondary-title {
+    margin-bottom: 0;
+  }
+
+  .content-feature-2 {
+    grid-row: 1;
+  }
+
+  .content-feature-4 {
+    grid-row: 2;
+  }
+
+  .content-feature-2,
+  .content-feature-4 {
+    grid-column: 3;
+  }
+}
+
+/* --------------------- */
+
+@media (min-width: 811px) {
+  h2 {
     font-size: 2.25rem;
   }
 
@@ -221,7 +342,4 @@ Media Query
   p {
     font-size: 1.625rem;
   }
-}
-
-@media (min-width: 811px) {
 }
