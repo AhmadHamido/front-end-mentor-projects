@@ -298,7 +298,7 @@ Media Query
       minmax(auto, 214px)
       minmax(auto, 127px)
       minmax(auto, 46px)
-      minmax(auto, 348px)
+      minmax(auto, 302px)
       minmax(2rem, 1fr);
   }
 
@@ -347,19 +347,15 @@ Media Query
       repeat(2, auto)
       /
       minmax(2rem, 60.5px)
-      minmax(auto, 330px)
+      minmax(auto, 300px)
+      minmax(auto, 30px)
       minmax(auto, 300px)
       minmax(2rem, 1fr);
   }
 
   .content-feature-2,
   .content-feature-4 {
-    grid-column: 3;
-  }
-
-  .content-feature-1,
-  .content-feature-3 {
-    margin-right: 2em;
+    grid-column: 4;
   }
 
   /* shared layout */
@@ -500,9 +496,9 @@ Media Query
       /
       minmax(2rem, 1fr)
       minmax(auto, 255px)
-      minmax(auto, 26.667px)
+      minmax(auto, 30px)
       minmax(auto, 255px)
-      minmax(auto, 26.667px)
+      minmax(auto, 30px)
       minmax(auto, 255px)
       minmax(auto, 30px)
       minmax(auto, 255px)
