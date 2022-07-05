@@ -467,7 +467,7 @@ Media Query
   .sub-intro {
     grid-column: 6;
     grid-template: repeat(2, auto) / minmax(auto, 255px);
-    justify-self: center;
+    justify-self: end;
     align-self: center;
     margin: 0;
     grid-gap: 0;
